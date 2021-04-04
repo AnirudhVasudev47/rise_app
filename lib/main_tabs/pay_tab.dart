@@ -2,6 +2,7 @@ import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:rise/components/header_file.dart';
 import 'package:rise/components/pay_tab_options_card.dart';
+import 'package:rise/screens/payment_screen.dart';
 import 'package:rise/screens/risetag_payment_screen.dart';
 
 class PaymentTab extends StatefulWidget {
@@ -99,7 +100,7 @@ class _PaymentTabState extends State<PaymentTab> {
                       onPressed: (){
                         Navigator.push(
                           context,
-                          ScaleRoute(page: RiseTagPaymentScreen()),
+                          ScaleRoute(page: PaymentScreen()),
                         );
                       },
                     ),
