@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:rise/components/transaction_dialog.dart';
 
@@ -20,14 +22,19 @@ class TransactionListCard extends StatelessWidget {
       behavior: HitTestBehavior.opaque,
       onLongPress: (){
         showModalBottomSheet(
+          backgroundColor: Color(0x00000000),
           isScrollControlled: true,
             context: context,
             builder: (BuildContext context){
-          return Container(height: size.height * 0.7,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20),),
-              ),
-              child: SingleTransactionDialog(image: image, title: title, color: color, amount: amount, piggyAmount: piggyAmount, date: date,),
+          return BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+            child: Container(height: size.height * 0.7,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20),),
+                ),
+                child: SingleTransactionDialog(image: image, title: title, color: color, amount: amount, piggyAmount: piggyAmount, date: date,),
+            ),
           );
         });
       },

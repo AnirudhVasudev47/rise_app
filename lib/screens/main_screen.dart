@@ -120,7 +120,7 @@ class MainPageState extends State<MainPage>{
               showSelectedLabels: false,
               currentIndex: _selectedIndex,
               selectedIconTheme: IconThemeData(size: 35),
-              selectedItemColor: Colors.blue[800],
+              selectedItemColor: Color(0xff363636),
               unselectedItemColor: Colors.blueGrey[800],
               onTap: _onItemTapped,
             ),

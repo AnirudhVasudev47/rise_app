@@ -165,3 +165,22 @@ class SideMainMenu extends StatelessWidget {
   }
 
 }
+
+
+/*
+Widget addBlur(bool isOpen){
+    if (isOpen) {
+      return BackdropFilter(
+        filter: ImageFilter.blur(
+          sigmaX: 8.0,
+          sigmaY: 8.0,
+        ),
+        child: Container(
+          color: Colors.transparent,
+        ),
+      );
+    } else {
+      return Container();
+    }
+  }
+ */

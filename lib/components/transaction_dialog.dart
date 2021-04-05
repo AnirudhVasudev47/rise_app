@@ -38,8 +38,8 @@ class SingleTransactionDialog extends StatelessWidget {
             color: Colors.black54,
             height: 20,
             thickness: 4,
-            indent: size.width * 0.3,
-            endIndent: size.width * 0.3,
+            indent: size.width * 0.45,
+            endIndent: size.width * 0.45,
           ),
           SizedBox(
             height: 10,
