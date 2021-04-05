@@ -1,5 +1,6 @@
 import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
+import 'package:rise/components/amount_in_account.dart';
 import 'package:rise/components/header_file.dart';
 import 'package:rise/components/pay_tab_options_card.dart';
 import 'package:rise/screens/payment_screen.dart';
@@ -47,106 +48,58 @@ class _PaymentTabState extends State<PaymentTab> {
             image: 'images/payment_tab/qrCode.png',
             opacity: 1,
           ),
+          AmountInAccount(floatFontSize: shrinkAmount?10:20, fontSize: shrinkAmount?20:40,),
+          SizedBox(height: 10,),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 10).copyWith(top: 15),
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    child: AnimatedDefaultTextStyle(
-                      curve: _curve,
-                      child: Text('Spending account'),
-                      duration: Duration(milliseconds: milli),
-                      style: TextStyle(
-                        fontSize: shrinkAmount?8:16,
-                        color: Colors.black45,
-                        fontWeight: FontWeight.w700,
-                        fontFamily: font,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        AnimatedDefaultTextStyle(
-                          curve: _curve,
-                          child: Text('₹12,64,500'),
-                          duration: Duration(milliseconds: milli),
-                          style: TextStyle(
-                            fontSize: shrinkAmount?20:40,
-                            color: Colors.black,
-                            fontFamily: font,
-                          ),
-                        ),
-                        AnimatedDefaultTextStyle(
-                          curve: _curve,
-                          child: Text('.00'),
-                          duration: Duration(milliseconds: milli),
-                          style: TextStyle(
-                            fontSize: shrinkAmount?10:20,
-                            color: Colors.black,
-                            fontFamily: font,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 10,),
-                  Container(
-                    child: PayTabOptionsCard(
-                      image: 'images/payment_tab/rise_tag.png',
-                      title: '₹Risetag',
-                      onPressed: (){
-                        Navigator.push(
-                          context,
-                          ScaleRoute(page: PaymentScreen()),
-                        );
-                      },
-                    ),
-                  ),
-                  Container(
-                    child: PayTabOptionsCard(
-                      image: 'images/payment_tab/bank_transfer.png',
-                      title: 'Bank Transfer',
-                      onPressed: (){
-                        print('Bank Transfer');
-                      },
-                    ),
-                  ),
-                  Container(
-                    child: PayTabOptionsCard(
-                      image: 'images/payment_tab/phone_number.png',
-                      title: 'Phone Number',
-                      onPressed: (){
-                        print('Phone Number');
-                      },
-                    ),
-                  ),
-                  Container(
-                    child: PayTabOptionsCard(
-                      image: 'images/payment_tab/upi.png',
-                      title: 'UPI ID',
-                      onPressed: (){
-                        print('UPI ID');
-                      },
-                    ),
-                  ),
-                  Container(
-                    child: PayTabOptionsCard(
-                      image: 'images/payment_tab/bill.png',
-                      title: 'Bill Payment',
-                      onPressed: (){
-                        print('Bill Payment');
-                      },
-                    ),
-                  ),
-                ],
-              ),
+            child: PayTabOptionsCard(
+              image: 'images/payment_tab/rise_tag.png',
+              title: '₹Risetag',
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  ScaleRoute(page: PaymentScreen()),
+                );
+              },
+            ),
+          ),
+          Container(
+            child: PayTabOptionsCard(
+              image: 'images/payment_tab/bank_transfer.png',
+              title: 'Bank Transfer',
+              onPressed: (){
+                print('Bank Transfer');
+              },
+            ),
+          ),
+          Container(
+            child: PayTabOptionsCard(
+              image: 'images/payment_tab/phone_number.png',
+              title: 'Phone Number',
+              onPressed: (){
+                print('Phone Number');
+              },
+            ),
+          ),
+          Container(
+            child: PayTabOptionsCard(
+              image: 'images/payment_tab/upi.png',
+              title: 'UPI ID',
+              onPressed: (){
+                print('UPI ID');
+              },
+            ),
+          ),
+          Container(
+            child: PayTabOptionsCard(
+              image: 'images/payment_tab/bill.png',
+              title: 'Bill Payment',
+              onPressed: (){
+                print('Bill Payment');
+              },
             ),
           ),
         ],
-      ),
-    );
+        ),
+      );
   }
 }

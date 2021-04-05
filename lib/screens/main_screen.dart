@@ -74,7 +74,7 @@ class MainPageState extends State<MainPage>{
                     child: _widgetOptions.elementAt(_selectedIndex),
                   ),
                   IconButton(
-                    icon: Icon(Icons.menu, size: 35,),
+                    icon: Icon(Icons.menu, size: 30,),
                     onPressed: () {
                       final _state = _endSideMenuKey.currentState;
                       if (_state.isOpened)

@@ -80,7 +80,16 @@ flutter:
         - asset: fonts/SwitzeraADF-Regular.otf
     - family: ProductSans
       fonts:
-        - asset: fonts/ProductSansRegular.ttf
+        - asset: fonts/ProductSans/ProductSans-BlackItalic.ttf
+        - asset: fonts/ProductSans/ProductSans-Bold.ttf
+        - asset: fonts/ProductSans/ProductSans-BoldItalic.ttf
+        - asset: fonts/ProductSans/ProductSans-Italic.ttf
+        - asset: fonts/ProductSans/ProductSans-Light.ttf
+        - asset: fonts/ProductSans/ProductSans-LightItalic.ttf
+        - asset: fonts/ProductSans/ProductSans-Medium.ttf
+        - asset: fonts/ProductSans/ProductSans-MediumItalic.ttf
+        - asset: fonts/ProductSans/ProductSans-Regular.ttf
+        - asset: fonts/ProductSans/ProductSans-Thin.ttf
     - family: CustomIcons
       fonts:
         - asset: fonts/CustomIcons.ttf

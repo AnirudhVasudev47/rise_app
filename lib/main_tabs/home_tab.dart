@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rise/components/amount_in_account.dart';
 import 'package:rise/components/day_seperator.dart';
 import 'package:rise/components/header_file.dart';
 import 'package:rise/components/transaction_card.dart';
@@ -48,55 +49,7 @@ class _HomeTabState extends State<HomeTab> {
               );
             },
           ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 10).copyWith(top: 15),
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    child: AnimatedDefaultTextStyle(
-                      curve: _curve,
-                      child: Text('Spending account'),
-                      duration: Duration(milliseconds: milli),
-                      style: TextStyle(
-                        fontSize: shrinkAmount?8:16,
-                        color: Colors.black45,
-                        fontWeight: FontWeight.w700,
-                        fontFamily: font,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        AnimatedDefaultTextStyle(
-                          curve: _curve,
-                          child: Text('₹12,64,500'),
-                          duration: Duration(milliseconds: milli),
-                          style: TextStyle(
-                            fontSize: shrinkAmount?20:40,
-                            color: Colors.black,
-                            fontFamily: font,
-                          ),
-                        ),
-                        AnimatedDefaultTextStyle(
-                          curve: _curve,
-                          child: Text('.00'),
-                          duration: Duration(milliseconds: milli),
-                          style: TextStyle(
-                            fontSize: shrinkAmount?10:20,
-                            color: Colors.black,
-                            fontFamily: font,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          AmountInAccount(floatFontSize: shrinkAmount?10:20, fontSize: shrinkAmount?20:40,),
           Expanded(
             child: ListView(
               controller: controller,
@@ -109,9 +62,7 @@ class _HomeTabState extends State<HomeTab> {
                 },),
                 TransactionListCard(image: 'images/uber.png', title: 'Uber', date: '10:00am / Mar 12', amount: '107.00', piggyAmount: '3',),
 
-                TransactionListCard(image: 'images/piggy_bank_color.png', title: 'Piggy Bank Transfer', date: '10:00am / Mar 12', amount: '3',),
-
-                TransactionListCard(image: 'images/user_x.png', title: 'Transfer from User X', date: '3:20pm / Mar 12', color: Colors.green, amount: '5,000.00',),
+                TransactionListCard(image: 'images/user_x.png', title: 'Transfer from User X', date: '3:20pm / Mar 12', color: Color(0xff53D07D), amount: '5,000.00',),
 
                 TransactionListCard(image: 'images/netflix.png', title: 'Netflix', date: '3:20pm / Mar 12', amount: '299.00',),
 
@@ -120,9 +71,7 @@ class _HomeTabState extends State<HomeTab> {
                 DaySeperator(dayName: 'Yesterday', seeAll: false,),
                 TransactionListCard(image: 'images/amazon.png', title: 'Prime', date: '10:00am / Mar 11', amount: '999.00', piggyAmount: '1',),
 
-                TransactionListCard(image: 'images/piggy_bank_color.png', title: 'Piggy Bank Transfer', date: '10:00am / Mar 11', amount: '1',),
-
-                TransactionListCard(image: 'images/user_x.png', title: 'Transfer to User Y', date: '3:20pm / Mar 11', color: Colors.green, amount: '3,500.00',),
+                TransactionListCard(image: 'images/user_x.png', title: 'Transfer to User Y', date: '3:20pm / Mar 11', color: Color(0xff53D07D), amount: '3,500.00',),
 
                 TransactionListCard(image: 'images/netflix.png', title: 'Netflix', date: '3:20pm / Mar 11', amount: '299.00',),
 

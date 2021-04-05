@@ -33,9 +33,10 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
             height: 30,
           ),
           Container(
+            padding: EdgeInsets.symmetric(horizontal: 40),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Container(
                   child: Column(
@@ -47,7 +48,7 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                           style: TextStyle(
                             fontFamily: font,
                             fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                       ),
@@ -57,7 +58,7 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                           style: TextStyle(
                             fontFamily: font,
                             fontSize: 11,
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w300,
                           ),
                         ),
                       ),
@@ -92,7 +93,7 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                   style: TextStyle(
                     fontFamily: font,
                     fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ],
@@ -111,16 +112,16 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                   style: TextStyle(
                     fontFamily: font,
                     fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 Container(
                   child: Text(
-                    'Control how your can be used',
+                    'Control how your card can be used',
                     style: TextStyle(
                       fontFamily: font,
                       fontSize: 11,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w300,
                     ),
                   ),
                 ),
@@ -136,7 +137,7 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                         style: TextStyle(
                           fontFamily: font,
                           fontSize: 16,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ],

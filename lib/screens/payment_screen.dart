@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:rise/components/header_file.dart';
@@ -22,6 +24,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             children: <Widget>[
               HeaderContainer(
                 opacity: 1,
+                onPressed: (){Navigator.pop(context);},
                 image: 'images/payment_tab/back_button.png',
                 size: Size.square(50),
                 imageSize: Size.square(30),
@@ -35,7 +38,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: <Widget>[
                           Text(
                             '₹',
                             textAlign: TextAlign.start,
@@ -50,6 +53,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                             minWidth: 100,
                             controller: _controller,
                             fullwidth: false,
+                            selectionWidthStyle: BoxWidthStyle.max,
                             decoration: InputDecoration(
                               hintText: '0',
                               hintStyle: TextStyle(fontSize: 64, fontFamily: font),

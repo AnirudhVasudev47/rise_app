@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rise/components/amount_in_account.dart';
 import 'package:rise/components/header_file.dart';
 import 'package:rise/components/piggy_dialog_box.dart';
 import 'package:rise/components/piggy_tab_card.dart';
@@ -34,29 +35,7 @@ class _PiggyBankTabState extends State<PiggyBankTab> {
       child: Column(
         children: <Widget>[
           HeaderContainer(opacity: 0, image: 'images/face.png', size: Size.square(60), imageSize: Size.square(60),),
-          Container(
-            child: AnimatedDefaultTextStyle(
-              child: Text('₹12,64,500.00'),
-              duration: Duration(milliseconds: 400),
-              style: TextStyle(
-                fontSize: shrinkAmount?20:40,
-                color: Colors.black,
-                fontFamily: font,
-              ),
-            ),
-          ),
-          Container(
-            child: AnimatedDefaultTextStyle(
-              child: Text('Spending account'),
-              duration: Duration(milliseconds: 400),
-              style: TextStyle(
-                fontSize: shrinkAmount?8:16,
-                color: Colors.black45,
-                fontWeight: FontWeight.w700,
-                fontFamily: font,
-              ),
-            ),
-          ),
+          AmountInAccount(floatFontSize: shrinkAmount?10:20, fontSize: shrinkAmount?20:40,),
           Container(
             child: Expanded(
               child: ListView(

@@ -19,7 +19,7 @@ class HeaderContainer extends StatelessWidget {
             width: size.width,
           ),
           Container(
-            height: 30,
+            height: 25,
             child: Image.asset('images/rise_black.png', fit: BoxFit.contain,),
           ),
           GestureDetector(

@@ -23,22 +23,34 @@ class TransactionListCard extends StatelessWidget {
           isScrollControlled: true,
             context: context,
             builder: (BuildContext context){
-          return Container(height: size.height * 0.7, child: SingleTransactionDialog(image: image, title: title, color: color, amount: amount, piggyAmount: piggyAmount, date: date,));
+          return Container(height: size.height * 0.7,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20),),
+              ),
+              child: SingleTransactionDialog(image: image, title: title, color: color, amount: amount, piggyAmount: piggyAmount, date: date,),
+          );
         });
       },
       child: Container(
-        padding: EdgeInsets.only(top: 10, right: 12, left: 12, bottom: 10),
+        padding: EdgeInsets.only(top: 10, right: 12, left: 5, bottom: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            CircleAvatar(
-              backgroundColor: Color(0x00000000),
-              backgroundImage: AssetImage(image),
-              maxRadius: 22,
+            Material(
+              elevation: 3,
+              borderRadius: BorderRadius.all(Radius.circular(50)),
+              child: Container(
+                child: CircleAvatar(
+                  backgroundColor: Color(0x00000000),
+                  backgroundImage: AssetImage(image),
+                  maxRadius: 22,
+                ),
+                
+              ),
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(left: 7),
+                padding: EdgeInsets.only(left: 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,6 +60,7 @@ class TransactionListCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         fontFamily: font,
+                        fontWeight: FontWeight.w300,
                       ),
                     ),
                     Text(
@@ -55,6 +68,8 @@ class TransactionListCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 11,
                         fontFamily: font,
+                        color: Color(0xff7b7b7b),
+                        fontWeight: FontWeight.w100,
                       ),
                     ),
                   ],
@@ -72,6 +87,7 @@ class TransactionListCard extends StatelessWidget {
                       color: color,
                       fontSize: 16,
                       fontFamily: font,
+                      fontWeight: FontWeight.w300
                     ),
                   ),
                   if (piggyAmount != null)
@@ -81,6 +97,7 @@ class TransactionListCard extends StatelessWidget {
                         color: color,
                         fontSize: 11,
                         fontFamily: font,
+                          fontWeight: FontWeight.w300
                       ),
                     ),
                   if(piggyAmount == null)
@@ -90,6 +107,7 @@ class TransactionListCard extends StatelessWidget {
                         color: color,
                         fontSize: 11,
                         fontFamily: font,
+                          fontWeight: FontWeight.w300
                       ),
                     ),
                 ],

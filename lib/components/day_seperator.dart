@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DaySeperator extends StatelessWidget {
+
+  final String font = 'ProductSans';
   final String dayName;
   final bool seeAll;
   final Function onPressed;
@@ -18,8 +20,10 @@ class DaySeperator extends StatelessWidget {
           Text(
             dayName,
             style: TextStyle(
-              fontFamily: 'Raleway',
+              fontFamily: font,
               fontSize: 18,
+              color: Colors.black54,
+              fontWeight: FontWeight.w300,
             ),
           ),
           if(seeAll)
@@ -27,19 +31,23 @@ class DaySeperator extends StatelessWidget {
             onTap: onPressed,
             child: Container(
               padding: EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.black,
-                  width: 1,
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-              ),
-              child: Text(
-                'More >',
-                style: TextStyle(
-                  fontFamily: 'Raleway',
-                  fontSize: 15,
-                ),
+
+              child: Row(
+                children: [
+                  Text(
+                    'More',
+                    style: TextStyle(
+                      fontFamily: font,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    size: 15,
+                    color: Colors.black54,
+                  )
+                ],
               ),
             ),
           ),
