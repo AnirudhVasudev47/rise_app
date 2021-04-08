@@ -1,3 +1,4 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:rise/screens/main_screen.dart';
 import 'package:rise/screens/user_profile_screen.dart';
@@ -24,7 +25,12 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
       ),
-      home: MainPage(),
+      home: AnimatedSplashScreen(
+        splash: "images/rise_black.png",
+        nextScreen: MainPage(),
+        duration: 2000,
+        splashIconSize: 60,
+      ),
     );
   }
 }

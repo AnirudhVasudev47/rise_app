@@ -16,7 +16,6 @@ class _PaymentTabState extends State<PaymentTab> {
   final int milli = 80;
   ScrollController controller = ScrollController();
   bool shrinkAmount = false;
-  Curve _curve = Curves.easeIn;
 
   @override
   void initState() {
