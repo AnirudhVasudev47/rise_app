@@ -11,6 +11,7 @@ class VirtualCardTab extends StatefulWidget {
 class _VirtualCardTabState extends State<VirtualCardTab> {
   final String font = 'ProductSans';
   bool isSwitched = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -71,7 +72,7 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                 Switch(
                   activeColor: Colors.orange,
                   value: isSwitched,
-                  onChanged: (value){
+                  onChanged: (value) {
                     setState(() {
                       isSwitched = value;
                       print(isSwitched);

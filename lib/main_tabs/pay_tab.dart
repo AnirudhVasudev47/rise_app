@@ -12,7 +12,6 @@ class PaymentTab extends StatefulWidget {
 }
 
 class _PaymentTabState extends State<PaymentTab> {
-
   final int milli = 80;
   ScrollController controller = ScrollController();
   bool shrinkAmount = false;
@@ -26,8 +25,10 @@ class _PaymentTabState extends State<PaymentTab> {
       });
     });
   }
+
   final String font = 'ProductSans';
   String qrCodeResult = "Not Yet Scanned";
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,8 +36,9 @@ class _PaymentTabState extends State<PaymentTab> {
       child: Column(
         children: <Widget>[
           HeaderContainer(
-            onPressed: () async{
-              String codeScanner = await BarcodeScanner.scan();    //barcode scanner
+            onPressed: () async {
+              String codeScanner =
+                  await BarcodeScanner.scan(); //barcode scanner
               setState(() {
                 qrCodeResult = codeScanner;
                 print(qrCodeResult); // Check and act accordingly
@@ -47,13 +49,18 @@ class _PaymentTabState extends State<PaymentTab> {
             image: 'images/payment_tab/qrCode.png',
             opacity: 1,
           ),
-          AmountInAccount(floatFontSize: shrinkAmount?10:20, fontSize: shrinkAmount?20:40,),
-          SizedBox(height: 10,),
+          AmountInAccount(
+            floatFontSize: shrinkAmount ? 10 : 20,
+            fontSize: shrinkAmount ? 20 : 40,
+          ),
+          SizedBox(
+            height: 10,
+          ),
           Container(
             child: PayTabOptionsCard(
               image: 'images/payment_tab/rise_tag.png',
               title: '₹Risetag',
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(
                   context,
                   ScaleRoute(page: PaymentScreen()),
@@ -65,7 +72,7 @@ class _PaymentTabState extends State<PaymentTab> {
             child: PayTabOptionsCard(
               image: 'images/payment_tab/bank_transfer.png',
               title: 'Bank Transfer',
-              onPressed: (){
+              onPressed: () {
                 print('Bank Transfer');
               },
             ),
@@ -74,7 +81,7 @@ class _PaymentTabState extends State<PaymentTab> {
             child: PayTabOptionsCard(
               image: 'images/payment_tab/phone_number.png',
               title: 'Phone Number',
-              onPressed: (){
+              onPressed: () {
                 print('Phone Number');
               },
             ),
@@ -83,7 +90,7 @@ class _PaymentTabState extends State<PaymentTab> {
             child: PayTabOptionsCard(
               image: 'images/payment_tab/upi.png',
               title: 'UPI ID',
-              onPressed: (){
+              onPressed: () {
                 print('UPI ID');
               },
             ),
@@ -92,13 +99,13 @@ class _PaymentTabState extends State<PaymentTab> {
             child: PayTabOptionsCard(
               image: 'images/payment_tab/bill.png',
               title: 'Bill Payment',
-              onPressed: (){
+              onPressed: () {
                 print('Bill Payment');
               },
             ),
           ),
         ],
-        ),
-      );
+      ),
+    );
   }
 }

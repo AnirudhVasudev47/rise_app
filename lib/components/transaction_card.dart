@@ -11,8 +11,9 @@ class TransactionListCard extends StatelessWidget {
   final String amount;
   final String piggyAmount;
   final String date;
+  final bool enableDialog;
 
-  TransactionListCard({this.image, this.title, this.color, this.amount, this.piggyAmount, this.date});
+  TransactionListCard({this.image, this.title, this.color, this.amount, this.piggyAmount, this.date, this.enableDialog});
   final String font = 'ProductSans';
 
   @override
@@ -52,7 +53,7 @@ class TransactionListCard extends StatelessWidget {
                   backgroundImage: AssetImage(image),
                   maxRadius: 22,
                 ),
-                
+
               ),
             ),
             Expanded(

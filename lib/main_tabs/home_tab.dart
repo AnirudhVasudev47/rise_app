@@ -121,6 +121,26 @@ class _HomeTabState extends State<HomeTab> {
                   date: '4:20pm / Mar 11',
                   amount: '3000.00',
                 ),
+
+                TransactionListCard(
+                  image: 'images/user_x.png',
+                  title: 'Transfer to User Y',
+                  date: '3:20pm / Mar 11',
+                  color: Color(0xff53D07D),
+                  amount: '3,500.00',
+                ),
+                TransactionListCard(
+                  image: 'images/netflix.png',
+                  title: 'Netflix',
+                  date: '3:20pm / Mar 11',
+                  amount: '299.00',
+                ),
+                TransactionListCard(
+                  image: 'images/user_x.png',
+                  title: 'Transfer to Goa Saver',
+                  date: '4:20pm / Mar 11',
+                  amount: '3000.00',
+                ),
               ],
             ),
           ),
