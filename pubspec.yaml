@@ -30,6 +30,8 @@ dependencies:
   numeric_keyboard: ^1.1.0
   auto_size_text_field: ^0.1.7
   animated_splash_screen: ^1.1.0
+  contacts_service: ^0.4.6
+  permission_handler: ^6.1.1
 
 
   # The following adds the Cupertino Icons font to your application.

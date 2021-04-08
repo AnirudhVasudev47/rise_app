@@ -61,9 +61,10 @@ class _PaymentTabState extends State<PaymentTab> {
               image: 'images/payment_tab/rise_tag.png',
               title: '₹Risetag',
               onPressed: () {
-                Navigator.push(
-                  context,
-                  ScaleRoute(page: PaymentScreen()),
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => RiseTagPaymentScreen(),
+                  ),
                 );
               },
             ),

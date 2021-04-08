@@ -2,8 +2,10 @@
     package="in.codedesign.rise">
 
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
-   <application
+    <application
         android:label="rise"
         android:icon="@mipmap/ic_launcher">
         <activity
