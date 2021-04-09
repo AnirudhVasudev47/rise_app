@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rise/components/contact_list.dart';
 import 'package:rise/components/header_file.dart';
 import 'package:rise/components/main_menu.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
@@ -20,7 +21,6 @@ class _RiseTagPaymentScreenState extends State<RiseTagPaymentScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var searchIcon;
     return SideMenu(
       key: _endSideMenuKey,
       inverse: false,
@@ -78,38 +78,7 @@ class _RiseTagPaymentScreenState extends State<RiseTagPaymentScreen> {
                           ],
                         ),
                       ),
-                      Theme(
-                        data: Theme.of(context).copyWith(
-                          primaryColor: Colors.orangeAccent,
-                        ),
-                        child: TextField(
-                          cursorColor: Colors.orangeAccent,
-                          decoration: new InputDecoration(
-                            prefixIcon: Icon(
-                              Icons.search_outlined,
-                            ),
-                            labelText: "Search in your contacts...",
-                            labelStyle: TextStyle(
-                              color: Colors.black,
-                            ),
-                            focusColor: Colors.orangeAccent,
-                            enabledBorder: const OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20.0)),
-                              borderSide: const BorderSide(
-                                color: Colors.grey,
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10.0)),
-                              borderSide:
-                                  BorderSide(color: Colors.orangeAccent),
-                            ),
-                          ),
-                        ),
-                      ),
-
+                      ContactListCard(),
                     ],
                   ),
                 ),
@@ -133,36 +102,34 @@ class _RiseTagPaymentScreenState extends State<RiseTagPaymentScreen> {
       ),
     );
   }
+
 }
+
 
 class ScaleRoute extends PageRouteBuilder {
   final Widget page;
 
   ScaleRoute({this.page})
       : super(
-          pageBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> secondaryAnimation,
-          ) =>
-              page,
-          transitionsBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> secondaryAnimation,
-            Widget child,
-          ) =>
-              ScaleTransition(
-            scale: Tween<double>(
-              begin: 0.0,
-              end: 1.0,
-            ).animate(
-              CurvedAnimation(
-                parent: animation,
-                curve: Curves.easeIn,
-              ),
+    pageBuilder: (BuildContext context,
+        Animation<double> animation,
+        Animation<double> secondaryAnimation,) =>
+    page,
+    transitionsBuilder: (BuildContext context,
+        Animation<double> animation,
+        Animation<double> secondaryAnimation,
+        Widget child,) =>
+        ScaleTransition(
+          scale: Tween<double>(
+            begin: 0.0,
+            end: 1.0,
+          ).animate(
+            CurvedAnimation(
+              parent: animation,
+              curve: Curves.easeIn,
             ),
-            child: child,
           ),
-        );
+          child: child,
+        ),
+  );
 }
