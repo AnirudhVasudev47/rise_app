@@ -6,8 +6,9 @@ class DaySeperator extends StatelessWidget {
   final String dayName;
   final bool seeAll;
   final Function onPressed;
+  final String buttonName;
 
-  DaySeperator({Key key, this.dayName, this.seeAll, this.onPressed});
+  DaySeperator({Key key, this.dayName, this.seeAll, this.onPressed, this.buttonName});
 
 
   @override
@@ -35,7 +36,7 @@ class DaySeperator extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    'More',
+                    buttonName,
                     style: TextStyle(
                       fontFamily: font,
                       fontSize: 15,

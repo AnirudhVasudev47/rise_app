@@ -2,7 +2,6 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rise/screens/main_screen.dart';
-import 'package:rise/screens/user_profile_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: Colors.orangeAccent,
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the

@@ -57,6 +57,7 @@ class _HomeTabState extends State<HomeTab> {
                 DaySeperator(
                   dayName: 'Today',
                   seeAll: true,
+                  buttonName: 'More',
                   onPressed: () {
                     Navigator.push(
                       context,

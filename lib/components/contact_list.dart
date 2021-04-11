@@ -20,6 +20,13 @@ class _ContactListCardState extends State<ContactListCard> {
     getPermissions();
   }
 
+
+  @override
+  void dispose() {
+    super.dispose();
+    searchController.dispose();
+  }
+
   getPermissions() async {
     if (await Permission.contacts.request().isGranted) {
       getAllContacts();
@@ -134,11 +141,7 @@ class _ContactListCardState extends State<ContactListCard> {
                             ? contactsFiltered[index]
                             : contacts[index];
 
-                        var baseColor =
-                            contactsColorMap[contact.displayName] as dynamic;
 
-                        Color color1 = baseColor[800];
-                        Color color2 = baseColor[400];
                         return ListTile(
                           title: Text(contact.displayName),
                           subtitle: Text(contact.phones.length > 0

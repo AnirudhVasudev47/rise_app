@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rise/components/amount_in_account.dart';
 import 'package:rise/components/header_file.dart';
 import 'package:rise/components/pay_tab_options_card.dart';
+import 'package:rise/screens/bank_payment_screen.dart';
 import 'package:rise/screens/payment_screen.dart';
 import 'package:rise/screens/risetag_payment_screen.dart';
 
@@ -74,7 +75,11 @@ class _PaymentTabState extends State<PaymentTab> {
               image: 'images/payment_tab/bank_transfer.png',
               title: 'Bank Transfer',
               onPressed: () {
-                print('Bank Transfer');
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => BankPaymentScreen(),
+                  ),
+                );
               },
             ),
           ),
@@ -83,7 +88,11 @@ class _PaymentTabState extends State<PaymentTab> {
               image: 'images/payment_tab/phone_number.png',
               title: 'Phone Number',
               onPressed: () {
-                print('Phone Number');
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => PaymentScreen(),
+                  ),
+                );
               },
             ),
           ),
