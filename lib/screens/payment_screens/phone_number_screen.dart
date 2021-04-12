@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:rise/components/contact_list.dart';
 import 'package:rise/components/header_file.dart';
 import 'package:rise/components/main_menu.dart';
+import 'package:rise/components/phone_number_contact.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 
-class RiseTagPaymentScreen extends StatefulWidget {
+class PhoneNumberScreen extends StatefulWidget {
   @override
-  _RiseTagPaymentScreenState createState() => _RiseTagPaymentScreenState();
+  _PhoneNumberScreenState createState() => _PhoneNumberScreenState();
 }
 
-class _RiseTagPaymentScreenState extends State<RiseTagPaymentScreen> {
+class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
+
   final font = 'ProductSans';
   final GlobalKey<SideMenuState> _sideMenuKey = GlobalKey<SideMenuState>();
   final GlobalKey<SideMenuState> _endSideMenuKey = GlobalKey<SideMenuState>();
@@ -56,19 +57,10 @@ class _RiseTagPaymentScreenState extends State<RiseTagPaymentScreen> {
                       Container(
                         padding: EdgeInsets.only(top: 30, bottom: 20),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
+                          children: [
                             Text(
-                              '₹',
-                              style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.w300,
-                                fontFamily: font,
-                                color: Colors.green,
-                              ),
-                            ),
-                            Text(
-                              'risetag',
+                              'Phone Number',
+                              textAlign: TextAlign.start,
                               style: TextStyle(
                                 fontSize: 30,
                                 fontWeight: FontWeight.w300,
@@ -78,7 +70,7 @@ class _RiseTagPaymentScreenState extends State<RiseTagPaymentScreen> {
                           ],
                         ),
                       ),
-                      ContactListCard(),
+                      PhoneNumberContactCard(),
                     ],
                   ),
                 ),
@@ -103,33 +95,4 @@ class _RiseTagPaymentScreenState extends State<RiseTagPaymentScreen> {
     );
   }
 
-}
-
-
-class ScaleRoute extends PageRouteBuilder {
-  final Widget page;
-
-  ScaleRoute({this.page})
-      : super(
-    pageBuilder: (BuildContext context,
-        Animation<double> animation,
-        Animation<double> secondaryAnimation,) =>
-    page,
-    transitionsBuilder: (BuildContext context,
-        Animation<double> animation,
-        Animation<double> secondaryAnimation,
-        Widget child,) =>
-        ScaleTransition(
-          scale: Tween<double>(
-            begin: 0.0,
-            end: 1.0,
-          ).animate(
-            CurvedAnimation(
-              parent: animation,
-              curve: Curves.easeIn,
-            ),
-          ),
-          child: child,
-        ),
-  );
 }

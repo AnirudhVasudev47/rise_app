@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rise/components/header_file.dart';
+import 'package:rise/screens/payment_screen.dart';
 
 class BankPaymentScreen extends StatefulWidget {
   @override
@@ -8,7 +9,6 @@ class BankPaymentScreen extends StatefulWidget {
 }
 
 class _BankPaymentScreenState extends State<BankPaymentScreen> {
-
   TextEditingController accountController = new TextEditingController();
   TextEditingController accCheckController = new TextEditingController();
   TextEditingController ifscController = new TextEditingController();
@@ -69,14 +69,17 @@ class _BankPaymentScreenState extends State<BankPaymentScreen> {
                                 ),
                                 focusColor: Colors.orangeAccent,
                                 enabledBorder: const OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20.0)),
                                   borderSide: const BorderSide(
                                     color: Colors.grey,
                                   ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                                  borderSide: BorderSide(color: Colors.orangeAccent),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10.0)),
+                                  borderSide:
+                                      BorderSide(color: Colors.orangeAccent),
                                 ),
                               ),
                             ),
@@ -100,14 +103,17 @@ class _BankPaymentScreenState extends State<BankPaymentScreen> {
                                 ),
                                 focusColor: Colors.orangeAccent,
                                 enabledBorder: const OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20.0)),
                                   borderSide: const BorderSide(
                                     color: Colors.grey,
                                   ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                                  borderSide: BorderSide(color: Colors.orangeAccent),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10.0)),
+                                  borderSide:
+                                      BorderSide(color: Colors.orangeAccent),
                                 ),
                               ),
                             ),
@@ -131,14 +137,17 @@ class _BankPaymentScreenState extends State<BankPaymentScreen> {
                                 ),
                                 focusColor: Colors.orangeAccent,
                                 enabledBorder: const OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20.0)),
                                   borderSide: const BorderSide(
                                     color: Colors.grey,
                                   ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                                  borderSide: BorderSide(color: Colors.orangeAccent),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10.0)),
+                                  borderSide:
+                                      BorderSide(color: Colors.orangeAccent),
                                 ),
                               ),
                             ),
@@ -162,14 +171,17 @@ class _BankPaymentScreenState extends State<BankPaymentScreen> {
                                 ),
                                 focusColor: Colors.orangeAccent,
                                 enabledBorder: const OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20.0)),
                                   borderSide: const BorderSide(
                                     color: Colors.grey,
                                   ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                                  borderSide: BorderSide(color: Colors.orangeAccent),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10.0)),
+                                  borderSide:
+                                      BorderSide(color: Colors.orangeAccent),
                                 ),
                               ),
                             ),
@@ -180,10 +192,19 @@ class _BankPaymentScreenState extends State<BankPaymentScreen> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10).copyWith(top: 70),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 10).copyWith(top: 70),
                   child: ElevatedButton(
-                    child: Text("Pay"),
-                    onPressed: () {},
+                    child: Text("Continue"),
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => PaymentScreen(
+                            name: nameController.text.toString(),
+                          ),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       textStyle: TextStyle(
                         fontFamily: font,

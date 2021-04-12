@@ -78,7 +78,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                           style: TextStyle(
                             fontFamily: font,
                             fontSize: 20,
-                            fontWeight: FontWeight.w900
+                            fontWeight: FontWeight.w500
                           ),
                         ),
                         _profileInfo('Name', 'Gaurav Amar'),
@@ -179,7 +179,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
               style: TextStyle(
                   fontFamily: font,
                   fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
               ),
             ),
           ),
@@ -190,7 +190,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                 style: TextStyle(
                     fontFamily: font,
                     fontSize: 16,
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.w300,
                 ),
                 textAlign: TextAlign.end,
               ),

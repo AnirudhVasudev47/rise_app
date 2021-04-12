@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:rise/components/amount_in_account.dart';
 import 'package:rise/components/header_file.dart';
 import 'package:rise/components/pay_tab_options_card.dart';
-import 'package:rise/screens/bank_payment_screen.dart';
-import 'package:rise/screens/payment_screen.dart';
-import 'package:rise/screens/risetag_payment_screen.dart';
+import 'file:///D:/PracticePrograms/PracticeAndroid1/flutter/rise/lib/screens/payment_screens/bank_payment_screen.dart';
+import 'file:///D:/PracticePrograms/PracticeAndroid1/flutter/rise/lib/screens/payment_screens/phone_number_screen.dart';
+import 'file:///D:/PracticePrograms/PracticeAndroid1/flutter/rise/lib/screens/payment_screens/risetag_payment_screen.dart';
+import 'package:rise/screens/payment_screens/upi_payment_screen.dart';
 
 class PaymentTab extends StatefulWidget {
   @override
@@ -90,7 +91,7 @@ class _PaymentTabState extends State<PaymentTab> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => PaymentScreen(),
+                    builder: (context) => PhoneNumberScreen(),
                   ),
                 );
               },
@@ -101,7 +102,11 @@ class _PaymentTabState extends State<PaymentTab> {
               image: 'images/payment_tab/upi.png',
               title: 'UPI ID',
               onPressed: () {
-                print('UPI ID');
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => UpiPaymentScreen(),
+                  ),
+                );
               },
             ),
           ),

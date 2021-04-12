@@ -7,6 +7,10 @@ import 'package:flutter/services.dart';
 import 'package:rise/components/header_file.dart';
 
 class PaymentScreen extends StatefulWidget {
+  final String name;
+
+  const PaymentScreen({Key key, this.name}) : super(key: key);
+
   @override
   _PaymentScreenState createState() => _PaymentScreenState();
 }
@@ -165,7 +169,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               child: CircleAvatar(
                                 backgroundColor: Color(0xffd0cdcd),
                                 child: Image.asset(
-                                  'images/face.png',                    //here comes the beneficiary Image
+                                  'images/face.png', //here comes the beneficiary Image
                                 ),
                               ),
                             ),
@@ -181,7 +185,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                         fontWeight: FontWeight.w300),
                                   ),
                                   Text(
-                                    'Yash.ja',                             //here comes the beneficiary name
+                                    widget.name == null ? 'Ajay' : '₹'+widget.name, //here comes the beneficiary name
                                     style: TextStyle(
                                         fontFamily: font,
                                         fontWeight: FontWeight.w300),

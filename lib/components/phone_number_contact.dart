@@ -1,14 +1,15 @@
 import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:rise/screens/payment_screen.dart';
 
-class ContactListCard extends StatefulWidget {
+class PhoneNumberContactCard extends StatefulWidget {
   @override
-  _ContactListCardState createState() => _ContactListCardState();
+  _PhoneNumberContactCardState createState() => _PhoneNumberContactCardState();
 }
 
-class _ContactListCardState extends State<ContactListCard> {
+class _PhoneNumberContactCardState extends State<PhoneNumberContactCard> {
   final String font = 'ProductSans';
   List<Contact> contacts = [];
   List<Contact> contactsFiltered = [];
@@ -20,7 +21,6 @@ class _ContactListCardState extends State<ContactListCard> {
     super.initState();
     getPermissions();
   }
-
 
   @override
   void dispose() {
@@ -92,7 +92,6 @@ class _ContactListCardState extends State<ContactListCard> {
 
   @override
   Widget build(BuildContext context) {
-    bool isSearching = searchController.text.isNotEmpty;
     bool listItemsExist = (contactsFiltered.length > 0 || contacts.length > 0);
     return Expanded(
       child: Container(
@@ -105,13 +104,18 @@ class _ContactListCardState extends State<ContactListCard> {
                   primaryColor: Colors.orangeAccent,
                 ),
                 child: TextField(
+                  inputFormatters: [
+                    FilteringTextInputFormatter.deny(
+                      RegExp(r"[a-zA-Z\-,]+|\s"),
+                    ),
+                  ],
+                  keyboardType: TextInputType.number,
+                  autofocus: true,
                   controller: searchController,
                   cursorColor: Colors.orangeAccent,
                   decoration: new InputDecoration(
-                    prefixIcon: Icon(
-                      Icons.search_outlined,
-                    ),
-                    labelText: "Search your contacts...",
+                    prefixText: '+91 ',
+                    labelText: "Enter phone number",
                     labelStyle: TextStyle(
                       color: Colors.black,
                     ),
@@ -130,24 +134,34 @@ class _ContactListCardState extends State<ContactListCard> {
                 ),
               ),
             ),
+            // if(!isSearching)
+            // GestureDetector(
+            //
+            //   child: Container(
+            //     padding: EdgeInsets.only(top: 10),
+            //     child: Row(
+            //       mainAxisAlignment: MainAxisAlignment.end,
+            //       children: <Widget>[
+            //         Text('Search Contact'),
+            //       ],
+            //     ),
+            //   ),
+            // ),
             listItemsExist == true
                 ? Expanded(
                     child: ListView.builder(
                       shrinkWrap: true,
-                      itemCount: isSearching == true
-                          ? contactsFiltered.length
-                          : contacts.length,
+                      itemCount: contactsFiltered.length,
                       itemBuilder: (context, index) {
-                        Contact contact = isSearching == true
-                            ? contactsFiltered[index]
-                            : contacts[index];
-
+                        Contact contact = contactsFiltered[index];
 
                         return ListTile(
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => PaymentScreen(name: contact.displayName,),
+                                builder: (context) => PaymentScreen(
+                                  name: contact.displayName,
+                                ),
                               ),
                             );
                           },
@@ -186,24 +200,7 @@ class _ContactListCardState extends State<ContactListCard> {
                   )
                 : Container(
                     padding: EdgeInsets.all(20),
-                    child: isSearching
-                        ? Text('No search results to show')
-                        : Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Loading...',
-                                style: TextStyle(
-                                  fontFamily: font,
-                                  fontSize: 30,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              CircularProgressIndicator(),
-                            ],
-                          ),
+                    child: Text(' '),
                   )
           ],
         ),

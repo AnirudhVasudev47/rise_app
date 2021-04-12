@@ -52,7 +52,7 @@ class _PiggyBankTabState extends State<PiggyBankTab> {
                     height: heightSize,
                   ),
                   PiggyTabCard(
-                    image: 'images/piggy_tab/lifestyle.png',
+                    image: '💰',
                     title: 'Life Savings',
                     amount: '1,00,000.00',
                   ),
@@ -60,7 +60,7 @@ class _PiggyBankTabState extends State<PiggyBankTab> {
                     height: heightSize,
                   ),
                   PiggyTabCard(
-                    image: 'images/piggy_tab/rent.png',
+                    image: '🏘️',
                     title: 'Rent',
                     amount: '5,000.00',
                     piggyAmount: '15,000',
@@ -69,7 +69,7 @@ class _PiggyBankTabState extends State<PiggyBankTab> {
                     height: heightSize,
                   ),
                   PiggyTabCard(
-                    image: 'images/piggy_tab/birthday.png',
+                    image: '🎂',
                     title: 'Birthday',
                     amount: '3,050.00',
                     piggyAmount: '5,000',
@@ -78,7 +78,7 @@ class _PiggyBankTabState extends State<PiggyBankTab> {
                     height: heightSize,
                   ),
                   PiggyTabCard(
-                    image: 'images/piggy_tab/laptop.png',
+                    image: '💻',
                     title: 'Laptop',
                     amount: '29,009.00',
                   ),
@@ -86,7 +86,7 @@ class _PiggyBankTabState extends State<PiggyBankTab> {
                     height: heightSize,
                   ),
                   PiggyTabCard(
-                    image: 'images/piggy_tab/emergency.png',
+                    image: '🆘',
                     title: 'Emergency Fund',
                     amount: '3,000.00',
                   ),
@@ -94,7 +94,7 @@ class _PiggyBankTabState extends State<PiggyBankTab> {
                     height: heightSize,
                   ),
                   PiggyTabCard(
-                    image: 'images/piggy_bank_color.png',
+                    image: '🐷',
                     title: 'Piggy Bank',
                     amount: '1,000.00',
                   ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class PiggyTabCard extends StatelessWidget {
-
   final String image;
   final String title;
   final Color color;
@@ -9,21 +8,36 @@ class PiggyTabCard extends StatelessWidget {
   final String piggyAmount;
   final String date;
 
-  PiggyTabCard({this.image, this.title, this.color, this.amount, this.piggyAmount, this.date});
+  PiggyTabCard(
+      {this.image,
+      this.title,
+      this.color,
+      this.amount,
+      this.piggyAmount,
+      this.date});
+
   final String font = 'ProductSans';
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return GestureDetector(
-
       child: Container(
         padding: EdgeInsets.only(top: 15, right: 12, left: 12, bottom: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Container(height: 40,child: Image.asset(image)),
-            SizedBox(width: 20,),
+            Container(
+              height: 40,
+              child: Text(
+                image,
+                style: TextStyle(
+                  fontSize: 30
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 20,
+            ),
             Expanded(
               child: Container(
                 padding: EdgeInsets.only(left: 7),
@@ -56,14 +70,14 @@ class PiggyTabCard extends StatelessWidget {
                     ),
                   ),
                   if (piggyAmount != null)
-                  Text(
-                    'of ₹$piggyAmount',
-                    style: TextStyle(
-                      color: color,
-                      fontSize: 11,
-                      fontFamily: font,
+                    Text(
+                      'of ₹$piggyAmount',
+                      style: TextStyle(
+                        color: color,
+                        fontSize: 11,
+                        fontFamily: font,
+                      ),
                     ),
-                  ),
                 ],
               ),
             ),
