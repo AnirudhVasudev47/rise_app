@@ -97,7 +97,7 @@ class _FlipVirtualCardState extends State<FlipVirtualCard> {
         ),
         Positioned(
           top: 45,
-          left: 10,
+          left: 25,
           child: Container(
             height: 60,
             child: Image.asset('images/card_chip.png'),
@@ -105,7 +105,7 @@ class _FlipVirtualCardState extends State<FlipVirtualCard> {
         ),
         Positioned(
           top: 110,
-          left: 30,
+          left: 20,
           child: Text(
             '4631 5321 8790 3251',
             style: TextStyle(
@@ -125,20 +125,20 @@ class _FlipVirtualCardState extends State<FlipVirtualCard> {
           child: Container(height: 28, child: Image.asset('images/rise_black.png'),),
         ),
         Positioned(
-          top: 150,
-          left: 30,
+          top: 160,
+          left: 20,
           child: Text(
             'GAURAV AMAR',
             style: TextStyle(
               fontFamily: font,
               fontWeight: FontWeight.bold,
-              fontSize: 20,
+              fontSize: 17,
               color: Colors.black,
             ),
           ),
         ),
         Positioned(
-          bottom: 35,
+          top: 160,
           right: 45,
           child: Text(
             '02/77',
@@ -151,7 +151,7 @@ class _FlipVirtualCardState extends State<FlipVirtualCard> {
           ),
         ),
         Positioned(
-          bottom: 30,
+          top: 160,
           right: 95,
           child: Text(
             'VALID\nTHRU',

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 class DaySeperator extends StatelessWidget {
-
-  final String font = 'ProductSans';
+  final String font = 'Nunito';
   final String dayName;
   final bool seeAll;
   final Function onPressed;
   final String buttonName;
-
-  DaySeperator({Key key, this.dayName, this.seeAll, this.onPressed, this.buttonName});
-
+  DaySeperator(
+      {Key key, this.dayName, this.seeAll, this.onPressed, this.buttonName});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 10, ),
+      padding: EdgeInsets.symmetric(
+        vertical: 10,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -22,36 +22,36 @@ class DaySeperator extends StatelessWidget {
             dayName,
             style: TextStyle(
               fontFamily: font,
-              fontSize: 18,
-              color: Colors.black54,
-              fontWeight: FontWeight.w300,
+              fontSize: 15,
+              color: Color(0xff707070),
+              fontWeight: FontWeight.w500,
             ),
           ),
-          if(seeAll)
-          GestureDetector(
-            onTap: onPressed,
-            child: Container(
-              padding: EdgeInsets.all(4),
-
-              child: Row(
-                children: [
-                  Text(
-                    buttonName,
-                    style: TextStyle(
-                      fontFamily: font,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w300,
+          if (seeAll)
+            GestureDetector(
+              onTap: onPressed,
+              child: Container(
+                padding: EdgeInsets.all(4),
+                child: Row(
+                  children: [
+                    Text(
+                      buttonName,
+                      style: TextStyle(
+                        fontFamily: font,
+                        fontSize: 15,
+                        color: Color(0xff707070),
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    size: 15,
-                    color: Colors.black54,
-                  )
-                ],
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: 15,
+                      color: Colors.black54,
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
         ],
       ),
     );

@@ -14,7 +14,7 @@ class TransactionListCard extends StatelessWidget {
   final bool enableDialog;
 
   TransactionListCard({this.image, this.title, this.color, this.amount, this.piggyAmount, this.date, this.enableDialog});
-  final String font = 'ProductSans';
+  final String font = 'Nunito';
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class TransactionListCard extends StatelessWidget {
         });
       },
       child: Container(
-        padding: EdgeInsets.only(top: 10, right: 12, left: 5, bottom: 10),
+        padding: EdgeInsets.only(top: 20, right: 12, left: 5, bottom: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -51,14 +51,13 @@ class TransactionListCard extends StatelessWidget {
                 child: CircleAvatar(
                   backgroundColor: Color(0x00000000),
                   backgroundImage: AssetImage(image),
-                  maxRadius: 22,
+                  maxRadius: 20,
                 ),
-
               ),
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(left: 10),
+                padding: EdgeInsets.only(left: 15),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,18 +65,18 @@ class TransactionListCard extends StatelessWidget {
                     Text(
                       title,
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 15,
                         fontFamily: font,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                     Text(
                       date,
                       style: TextStyle(
-                        fontSize: 11,
+                        fontSize: 13,
                         fontFamily: font,
-                        color: Color(0xff7b7b7b),
-                        fontWeight: FontWeight.w100,
+                        color: Color(0xffa6a6a6),
+                        fontWeight: FontWeight.w300,
                       ),
                     ),
                   ],
@@ -92,20 +91,20 @@ class TransactionListCard extends StatelessWidget {
                   Text(
                     ' ₹$amount',
                     style: TextStyle(
-                      color: color,
-                      fontSize: 16,
+                      fontSize: 15,
                       fontFamily: font,
-                      fontWeight: FontWeight.w300
+                      fontWeight: FontWeight.w400,
+                      color: color,
                     ),
                   ),
                   if (piggyAmount != null)
                     Text(
                       'Piggy bank ₹$piggyAmount',
                       style: TextStyle(
-                        color: color,
-                        fontSize: 11,
+                        fontSize: 13,
                         fontFamily: font,
-                          fontWeight: FontWeight.w300
+                        color: Color(0xffa6a6a6),
+                        fontWeight: FontWeight.w300,
                       ),
                     ),
                   if(piggyAmount == null)

@@ -73,13 +73,27 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                           ),
                         ),
                         SizedBox(height: 20,),
-                        Text(
-                          '@gauravamar23',
-                          style: TextStyle(
-                            fontFamily: font,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '₹ ',
+                              style: TextStyle(
+                                  fontFamily: font,
+                                  fontSize: 20,
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.w500
+                              ),
+                            ),
+                            Text(
+                              'gauravamar23',
+                              style: TextStyle(
+                                fontFamily: font,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500
+                              ),
+                            ),
+                          ],
                         ),
                         _profileInfo('Name', 'Gaurav Amar'),
                         _profileInfo('Account Number', '012345678954321'),
@@ -87,7 +101,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                         _profileInfo('Email', 'anirudh040799@gmail.com'),
                         _profileInfo('Address', '#177 1st Main 7th Cross Girinagar, Bangalore-85'),
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 15,).copyWith(top: 25),
+                          padding: EdgeInsets.symmetric(horizontal: 25,).copyWith(top: 25),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
@@ -121,7 +135,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                           behavior: HitTestBehavior.opaque,
                           onTap: (){},
                           child: Container(
-                            padding: EdgeInsets.symmetric(horizontal: 15,).copyWith(top: 25),
+                            padding: EdgeInsets.symmetric(horizontal: 25,).copyWith(top: 25),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
@@ -168,7 +182,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
 
   Widget _profileInfo(String title, String value){
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15,).copyWith(top: 25),
+      padding: EdgeInsets.symmetric(horizontal: 25,).copyWith(top: 30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[

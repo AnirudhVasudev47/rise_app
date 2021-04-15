@@ -30,9 +30,7 @@ class PiggyTabCard extends StatelessWidget {
               height: 40,
               child: Text(
                 image,
-                style: TextStyle(
-                  fontSize: 30
-                ),
+                style: TextStyle(fontSize: 30),
               ),
             ),
             SizedBox(
@@ -50,6 +48,7 @@ class PiggyTabCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         fontFamily: font,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ],
@@ -64,9 +63,10 @@ class PiggyTabCard extends StatelessWidget {
                   Text(
                     ' ₹$amount',
                     style: TextStyle(
-                      color: color,
                       fontSize: 16,
                       fontFamily: font,
+                      color: color,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                   if (piggyAmount != null)
@@ -74,8 +74,9 @@ class PiggyTabCard extends StatelessWidget {
                       'of ₹$piggyAmount',
                       style: TextStyle(
                         color: color,
-                        fontSize: 11,
+                        fontSize: 13,
                         fontFamily: font,
+                        fontWeight: FontWeight.w300,
                       ),
                     ),
                 ],

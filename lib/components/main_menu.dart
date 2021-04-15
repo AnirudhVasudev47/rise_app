@@ -26,7 +26,8 @@ class SideMainMenu extends StatelessWidget {
                       child: Text(
                         'About us',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                           fontFamily: font,
                         ),
                       ),
@@ -34,7 +35,7 @@ class SideMainMenu extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 25,
                 ),
                 Row(
                   children: <Widget>[
@@ -46,7 +47,8 @@ class SideMainMenu extends StatelessWidget {
                       child: Text(
                         'FAQ\'s',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                           fontFamily: font,
                         ),
                       ),
@@ -54,7 +56,7 @@ class SideMainMenu extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 25,
                 ),
                 Row(
                   children: <Widget>[
@@ -66,7 +68,8 @@ class SideMainMenu extends StatelessWidget {
                       child: Text(
                         'Terms & Conditions',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                           fontFamily: font,
                         ),
                       ),
@@ -74,7 +77,7 @@ class SideMainMenu extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 25,
                 ),
                 Row(
                   children: <Widget>[
@@ -86,7 +89,8 @@ class SideMainMenu extends StatelessWidget {
                       child: Text(
                         'Invite friends',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                           fontFamily: font,
                         ),
                       ),
@@ -94,7 +98,7 @@ class SideMainMenu extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 25,
                 ),
                 Row(
                   children: <Widget>[
@@ -106,7 +110,8 @@ class SideMainMenu extends StatelessWidget {
                       child: Text(
                         'Help Center',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                           fontFamily: font,
                         ),
                       ),
@@ -148,7 +153,8 @@ class SideMainMenu extends StatelessWidget {
                         child: Text(
                           'Logout',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500,
                             fontFamily: font,
                           ),
                         ),

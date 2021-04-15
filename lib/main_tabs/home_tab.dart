@@ -26,7 +26,7 @@ class _HomeTabState extends State<HomeTab> {
     });
   }
 
-  final String font = 'ProductSans';
+  final String font = 'Nunito';
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +42,14 @@ class _HomeTabState extends State<HomeTab> {
             onPressed: () {
               Navigator.push(
                 context,
-                ScaleRoute(page: UserProfileScreen()),
+                MaterialPageRoute(
+                    builder: (context) => UserProfileScreen()),
               );
             },
           ),
           AmountInAccount(
-            floatFontSize: shrinkAmount ? 10 : 20,
-            fontSize: shrinkAmount ? 20 : 40,
+            floatFontSize: shrinkAmount ? 15 : 15,
+            fontSize: shrinkAmount ? 40 : 40,
           ),
           Expanded(
             child: ListView(

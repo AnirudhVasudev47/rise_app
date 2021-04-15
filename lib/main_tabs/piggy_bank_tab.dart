@@ -40,8 +40,8 @@ class _PiggyBankTabState extends State<PiggyBankTab> {
             imageSize: Size.square(60),
           ),
           AmountInAccount(
-            floatFontSize: shrinkAmount ? 10 : 20,
-            fontSize: shrinkAmount ? 20 : 40,
+            floatFontSize: shrinkAmount ? 15 : 15,
+            fontSize: shrinkAmount ? 40 : 40,
           ),
           Container(
             child: Expanded(

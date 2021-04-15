@@ -25,13 +25,13 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
             opacity: 0,
           ),
           SizedBox(
-            height: 15,
+            height: 25,
           ),
           Center(
             child: FlipVirtualCard(),
           ),
           SizedBox(
-            height: 30,
+            height: 50,
           ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 40),
@@ -47,8 +47,8 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                         child: Text(
                           'Card inactive',
                           style: TextStyle(
-                            fontFamily: font,
                             fontSize: 16,
+                            fontFamily: font,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -57,8 +57,9 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                         child: Text(
                           'Toggling this on will make your\ncard inactive',
                           style: TextStyle(
+                            fontSize: 13,
                             fontFamily: font,
-                            fontSize: 11,
+                            color: Color(0xffa6a6a6),
                             fontWeight: FontWeight.w300,
                           ),
                         ),
@@ -92,8 +93,8 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                 Text(
                   'Reset Pin',
                   style: TextStyle(
-                    fontFamily: font,
                     fontSize: 16,
+                    fontFamily: font,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -109,10 +110,10 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Configuration Card',
+                  'Configure Card',
                   style: TextStyle(
-                    fontFamily: font,
                     fontSize: 16,
+                    fontFamily: font,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -120,8 +121,9 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                   child: Text(
                     'Control how your card can be used',
                     style: TextStyle(
+                      fontSize: 13,
                       fontFamily: font,
-                      fontSize: 11,
+                      color: Color(0xffa6a6a6),
                       fontWeight: FontWeight.w300,
                     ),
                   ),
@@ -136,8 +138,8 @@ class _VirtualCardTabState extends State<VirtualCardTab> {
                       Text(
                         'Report card as stolen or lost',
                         style: TextStyle(
-                          fontFamily: font,
                           fontSize: 16,
+                          fontFamily: font,
                           fontWeight: FontWeight.w400,
                         ),
                       ),

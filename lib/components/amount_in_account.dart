@@ -28,7 +28,7 @@ class _AmountInAccountState extends State<AmountInAccount> {
     });
   }
 
-  final String font = 'ProductSans';
+  final String font = 'Nunito';
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _AmountInAccountState extends State<AmountInAccount> {
                     style: TextStyle(
                       fontSize: widget.floatFontSize,
                       color: Colors.black45,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w500,
                       fontFamily: font,
                     ),
                   ),
@@ -63,9 +63,9 @@ class _AmountInAccountState extends State<AmountInAccount> {
                         duration: Duration(milliseconds: milli),
                         style: TextStyle(
                           fontSize: widget.fontSize,
-                          color: Color(0xff53D07D),
                           fontFamily: font,
-                          fontWeight: FontWeight.w300,
+                          color: Color(0xff53D07D),
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                       AnimatedDefaultTextStyle(
