@@ -54,6 +54,7 @@ class _HomeTabState extends State<HomeTab> {
           Expanded(
             child: ListView(
               controller: controller,
+              physics: BouncingScrollPhysics(),
               children: <Widget>[
                 DaySeperator(
                   dayName: 'Today',
