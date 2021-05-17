@@ -95,7 +95,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                     ),
                                   ),
                                   cursorColor: Colors.orangeAccent,
-                                  minFontSize: 24,
+                                  minFontSize: 10,
                                   textAlign: TextAlign.start,
                                   style:
                                       TextStyle(fontSize: 64, fontFamily: font),

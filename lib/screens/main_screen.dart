@@ -38,8 +38,9 @@ class MainPageState extends State<MainPage> {
   ];
 
   void _onItemTapped(int index) {
+    _selectedIndex = index;
     setState(() {
-      _selectedIndex = index;
+
     });
   }
 
